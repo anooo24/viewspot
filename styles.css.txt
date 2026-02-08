@@ -1,0 +1,103 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  color: white;
+}
+
+header {
+  background-color: #444;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+nav {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+nav button {
+  background-color: #555;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+
+nav button:hover {
+  background-color: #777;
+}
+
+.tab-content {
+  display: none;
+  padding: 2rem;
+}
+
+.active-tab {
+  display: block;
+}
+
+.product-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.product {
+  border: 1px solid #555;
+  background: #444;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+  max-width: 100px;
+  cursor: pointer;
+}
+
+.bill-section {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.bill-section input {
+  padding: 0.5rem;
+  width: 200px;
+  margin-bottom: 1rem;
+}
+
+#productForm,
+#expenseForm {
+  margin: 1rem auto;
+  max-width: 400px;
+  text-align: center;
+}
+
+#productForm input,
+#expenseForm input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+#productForm button,
+#expenseForm button {
+  padding: 0.5rem 1rem;
+  background-color: #555;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+#productForm button:hover,
+#expenseForm button:hover {
+  background-color: #777;
+}
+
+p {
+  font-size: 1.2rem;
+}

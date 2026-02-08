@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>POS System</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>WELCOME TO </h1>
+    <h1> VIEW SPOT </h1>
+    <nav>
+      <button onclick="showTab('dashboard')">Dashboard</button>
+      <button onclick="showTab('settings')">Settings</button>
+      <button onclick="showTab('budget')">Budget</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Dashboard -->
+    <div id="dashboard" class="tab-content active-tab">
+      <h2>Dashboard</h2>
+      <div id="productContainer" class="product-container"></div>
+      <div class="bill-section">
+        <label for="customerName">Customer Name:</label>
+        <input type="text" id="customerName" placeholder="Enter customer name" required />
+        <p>Total: <span id="totalBill">0.00 MVR</span></p>
+        <button onclick="saveBill()">Save Bill</button>
+      </div>
+    </div>
+
+    <!-- Settings -->
+    <div id="settings" class="tab-content">
+      <h2>Settings</h2>
+      <form id="productForm">
+        <label for="productName">Product Name:</label>
+        <input type="text" id="productName" required />
+        <label for="productPrice">Product Price:</label>
+        <input type="number" id="productPrice" required />
+        <label for="productImage">Product Image:</label>
+        <input type="file" id="productImage" accept="image/*" required />
+        <button type="submit">Add Product</button>
+      </form>
+      <ul id="productList"></ul>
+    </div>
+
+    <!-- Budget -->
+    <div id="budget" class="tab-content">
+      <h2>Budget</h2>
+      <p>Daily Income: <span id="dailyIncome">0.00 MVR</span></p>
+      <form id="expenseForm">
+        <label for="expenseAmount">Set Expenses:</label>
+        <input type="number" id="expenseAmount" placeholder="Enter expense amount" required />
+        <button type="submit">Save Expense</button>
+      </form>
+      <button onclick="resetIncome()">Reset Income</button>
+      <p>Net Income: <span id="netIncome">0.00 MVR</span></p>
+      <button onclick="resetExpenses()">Reset Expenses</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
